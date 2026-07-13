@@ -1,4 +1,4 @@
-# [ashlynnexavier.github.io](https://ashlynnexavier.github.io)
+# <a href="https://ashlynnexavier.github.io" target="_blank">ashlynnexavier.github.io</a>
 ## To-Do
 ### Next Steps
 - [ ] Update summary, experience, and projects descriptions
