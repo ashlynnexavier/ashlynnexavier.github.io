@@ -19,3 +19,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+NOTE: This license applies only to the source code (HTML, CSS, and
+JavaScript) in this repository. It does NOT apply to personal content,
+including but not limited to images, biographical text, résumé
+details, and job/project descriptions. See LICENSE-content.md for terms
+governing that content.

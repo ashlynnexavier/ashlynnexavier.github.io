@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata -->
+<head>
+    <!-- Define character set -->
+    <meta charset="UTF-8">
+
+    <!-- Set width to device width (pretty) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <!-- Page title -->
+    <title>Ashlynne Xavier</title>
+
+    <!-- Set tab/favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <!-- Base URL (unecessary when local)-->
+        <!-- <base href=""> -->
+        
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FontAwesome icons -->
+    <script src="https://kit.fontawesome.com/1a554408e2.js" crossorigin="anonymous"></script>
+
+    <!-- My scripts -->
+    <script src="script.js" defer></script>
+</head>
+
+<!-- Body -->
+<body>
+
+    <!-- Skip to content link for accessibility -->
+    <a href="#home" class="skip-link">Skip to main content</a>
+
+    <!-- NAV BAR -->
+    <nav class="nav">
+        <a href="#home" class="nav-name">Ashlynne Xavier</a>
+
+        <div class="nav-links-wrapper" id="nav-links-wrapper">
+            <ul class="nav-links">
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+
+            <ul class="nav-socials">
+                <li><a href="mailto:ashlynnexavier@gmail.com" aria-label="Email" target="_blank" rel="noopener"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/ashlynnexavier" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/ashlynne-xavier/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+
+        <button class="nav-hamburger" id="nav-hamburger" 
+            onclick="toggleNav(event)" 
+            aria-label="Menu" 
+            aria-expanded="false"
+            aria-controls="nav-links-wrapper">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+        
+    </nav>
+    
+
+    <!-- HERO: Headshot, title, and summary -->
+    <div class="hero" id="home" tabindex="-1">
+
+        <div class="hero-top">
+
+            <!-- Image box -->
+            <div class="hero-photo">
+            <img src="images/headshot.jpeg" alt="Headshot of Ashlynne">
+            </div>
+            
+            <!-- Text box -->
+            <div class="hero-text">
+                <div class="hero-text-top">
+                    <h1>Ashlynne Xavier</h1>
+                    <p>Biomedical Engineer</p>
+                </div>
+                <div class="hero-text-bottom">
+                    <div><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+                    <div><p>Long Island, NY</p></div>
+                    <div><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                    <div><p>B.S. Biomedical Engineering</p></div>
+                    <div><i class="fa-solid fa-building-columns" aria-hidden="true"></i></div>
+                    <div><p>University of Rochester '25</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-socials">
+            
+            <div class="hero-socialicon">
+                <a href="mailto:ashlynnexavier@gmail.com" aria-label="Email" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="hero-socialicon">
+                <a href="https://github.com/ashlynnexavier" aria-label="GitHub" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="hero-socialicon">
+                <a href="https://www.linkedin.com/in/ashlynne-xavier/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-summary" id="about">
+            <p>
+                Growing up using hearing aids, I became fascinated early on 
+                by the intersection of technology and medicine. In high 
+                school, I was equally drawn to the technical challenges of 
+                my math and science classes, and to the creative 
+                expression of art and music. When it came time to choose 
+                a career path, biomedical engineering was a natural fit; 
+                it presented an avenue through which I could direct both 
+                my technical skills and creative drive towards the 
+                singular goal of innovation that directly improves 
+                people's lives.
+            </p>
+            <p>
+                While earning my B.S. at the University of Rochester, I 
+                designed and ran experiments for two computational 
+                neuroscience labs and spent a summer at Boston University 
+                doing materials science research with a startup developing 
+                an electrochemical biosensor for multiple sclerosis. I'm 
+                currently interning with the Neural Bypass and 
+                Brain-Computer Interface Lab at the Feinstein Institutes 
+                for Medical Research, where I'm developing a computer 
+                vision and signal processing pipeline in Python to 
+                analyze stroke research data. Additional projects there 
+                have included CAD for 3D printing, soldering, debugging 
+                Arduino code, and neural data analysis in MATLAB. I'm actively 
+                seeking engineering roles in the healthcare and medical device 
+                industries, where I can contribute to impactful technologies 
+                while continuing to grow as an engineer. 
+            </p>
+            <p>
+                Outside of engineering, I enjoy running, reading, music, and
+                art, usually accompanied by my cat, Callie.
+                Feel free to reach out and chat! 
+            </p>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="experience" id="experience">
+        <div class="section-title">
+            <h2>Engineering & Research Experience</h2>
+        </div>
+        
+        <!-- Feinstein -->
+        <div class="experience-card">
+
+            <div class="experience-card-tab">
+                <h3>Feinstein Institutes for Medical Research (Northwell Health)</h3>
+                <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Manhasset, NY</p>
+            </div>
+
+            <div class="experience-card-text">
+                <h4>Electrical & Systems Engineering Intern</h4>
+                <p class="location">Karches Neural Bypass and Brain Computer Interface Lab</p>
+                <p class="dates">March - June 2026</p>
+                <p>
+                    I am developing a computer vision and signal processing 
+                    pipeline using Google MediaPipe to quantify changes in 
+                    functional hand movement during an interventional 
+                    study. I also design and 3D print circuit enclosures 
+                    and components for functional task assessments using 
+                    Fusion360, solder circuits, debug Arduino code in the 
+                    Arduino IDE and in MATLAB, and contribute to neural 
+                    data analysis in MATLAB. Throughout all of these 
+                    projects, I maintain compliance with HIPAA and IRB 
+                    standards for clinical research.
+                </p>
+            </div>
+
+        </div>
+        
+
+        <!-- Rochester -->
+        <div class="experience-card">
+
+            <div class="experience-card-tab">
+                <h3>University of Rochester</h3>
+                <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Rochester, NY</p>
+            </div>
+
+            <div class="experience-card-text">
+                <div>
+                <h4>Research Intern</h4>
+                <p class="location">Computational Neuroscience of Audition Lab</p>
+                <p class="dates">March 2024 - May 2025</p>
+                <p>
+                    I assisted with development of a human subjects 
+                    experiment investigating speech perception. This 
+                    included creating the stimuli, running the experiment, 
+                    and analyzing data. I ensured new procedures complied 
+                    with institutional regulations and updated in-lab 
+                    documentation as needed.
+                </p>
+                </div>
+                
+                <hr>
+
+                <div>
+                    <h4>Teaching Assistant</h4>
+                    <p class="location">Department of Biomedical Engineering</p>
+                    <p class="dates">February 2023 - May 2025</p>
+                    <p>
+                        I was a Teaching Assistant for BME 210: Biosystems and 
+                        Circuits, BME 230: Signals, Systems, and Imaging, and 
+                        BME 221: Biomedical Computation and Statistics. I 
+                        helped solve, created rubrics for, and graded homework 
+                        and MATLAB-based computer lab assignments, in addition 
+                        to assisting with practical labs and holding weekly 
+                        office hours and workshops.
+                    </p>
+                </div>
+
+                <hr>
+
+                <div>
+                    <h4>Research Assistant</h4>
+                    <p class="location">Auditory and Multisensory Processing Lab</p>
+                    <p class="dates">October 2022 - December 2024</p>
+                    <p>
+                        I assisted with behavioral and EEG experiments 
+                        involving human subjects, which involved setting up 
+                        the lab space before each session, walking the subject 
+                        through the process of informed consent and ensuring 
+                        their comfort throughout the experiment itself, 
+                        troubleshooting issues with the Python experimental 
+                        code and electronic equipment, and cleaning up, both 
+                        independently or with other members of the lab. I also 
+                        attended weekly lab meetings and supplementary 
+                        research talks.
+                    </p>
+
+                    <div class="linked-doc">
+                        <div><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div>
+                        <div><a href="https://doi.org/10.1098/rsos.220497" aria-label="Publication" target="_blank" rel="noopener">How strong is the rhythm of perception? A registered replication of Hickok et al. (2015)</a></div>
+                    </div>
+                </div>
+            </div>  
+                
+        </div>
+
+        <!-- Boston -->
+        <div class="experience-card">
+
+            <div class="experience-card-tab">
+                <h3>Boston University Photonics Center</h3>
+                <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Boston, MA</p>
+            </div>
+
+            <div class="experience-card-text">
+                <h4>Research Intern</h4>
+                <p class="location">NSF REU in Integrated Nanomanufacturing<br><i>StataDX</i></p>
+                <p class="dates">June - August 2023</p>
+                <p>
+                    I worked with a startup developing a point-of-care device 
+                    for detecting biomarkers of multiple sclerosis. My project 
+                    involved introducing magnetic nanoparticles into the 
+                    existing biosensor in order to enhance its sensitivity. 
+                    After performing a literature review, I ideated a design 
+                    for an improved system, implementing feedback from my 
+                    mentor and others in the lab. This project involved 
+                    numerous wet lab techniques, as well as computational 
+                    analysis in Python and CAD design in SolidWorks. At the 
+                    end of the summer, I designed a poster and presented it 
+                    at a capstone poster session to researchers from various 
+                    departments.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- EDUCATION -->
+    <div class="education" id="education">
+
+        <div class="section-title">
+            <h2>Education</h2>
+        </div>
+
+        <div class="education-block">
+            <div><h3><i class="fa-solid fa-building-columns" aria-hidden="true"></i></h3></div>
+            <div><h3>University of Rochester</h3></div>
+
+            <div><p><i class="fa-solid fa-location-dot" aria-hidden="true"></i></p></div>
+            <div><p>Rochester, NY</p></div>
+
+            <div></div>
+            <div><p class="major">B.S. with Highest Distinction in Biomedical Engineering</p></div>
+
+            <div></div>
+            <div><p class="conc">Concentration in Biosignals and Biosystems<br>Minor in Music Cognition</p></div>
+
+            <div><p class="details"><i class="fa-solid fa-star" aria-hidden="true"></i></p></div>
+            <div><p class="details"><b>GPA:</b> 3.86/4.00</p></div>
+
+            <div><p class="details"><i class="fa-solid fa-trophy" aria-hidden="true"></i></p></div>
+            <div>
+                <h4><b>Awards and Honors:</b></h4>
+                <ul>
+                    <li><b>Highest Distinction</b> - top 10% GPA in department</li>
+                    <li><b>Cum Laude</b> - top 15% GPA in graduating class</li>
+                    <li><b>Tau Beta Pi</b>, the Engineering Honor Society</li>
+                    <li><b>Alpha Eta Mu Beta</b>, the Biomedical Engineering Honor Society</li>
+                    <li><b>Patrick P. Lee Foundation Scholarship</b> - for engineering/tech students exemplifying integrity, leadership, and service</li>
+                    <li><b>Research and Innovation Grant</b> - for admitted students demonstrating strong potential in research and entrepreneurship</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="education-block">
+            <div><h3><i class="fa-solid fa-school-flag" aria-hidden="true"></i></h3></div>
+            <div><h3>Rocky Point High School</h3></div>
+
+            <div><p><i class="fa-solid fa-location-dot" aria-hidden="true"></i></p></div>
+            <div><p>Rocky Point, NY</p></div>
+
+            <div><h4><i class="fa-solid fa-trophy" aria-hidden="true"></i></h4></div>
+            <div>
+                <h4><b>Awards and Honors:</b></h4>
+                <ul>
+                    <li><b>Class Valedictorian</b></li>
+                    <li><b>National Merit Scholar</b></li>
+                    <li><b>CollegeBoard Recognition Scholar - Rural and Small Town</b></li>
+                    <li><b>Long Island Science Congress Merit Award</b></li>
+                    <li><b>National Honor Society</b></li>
+                    <li><b>National English Honor Society</b></li>
+                    <li><b>NYS Math Honor Society</b></li>
+                    <li><b>East End Arts Teeny Award</b> - for pit orchestra involvement</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- PROJECTS -->
+    <div class="projects" id="projects">
+        <div class="section-title">
+            <h2>Projects</h2>
+        </div>
+
+        <!-- Three-Dimensional Finger Tracking with RGB-Depth Cameras -->
+        <div class="projects-card">
+            <button class="projects-card-flip-btn" aria-expanded="false" 
+                aria-label="Show details for Three-Dimensional Finger Tracking project">
+                <span class="sr-only">Flip card</span>
+            </button>
+            <div class="projects-card-inner">
+                <div class="projects-card-front" style="background-image: url(images/3d_hand_tracking2.png);">
+                <h3>Three-Dimensional Finger Tracking with RGB-Depth Cameras</h3>
+                <p class="location"><i class="fa-solid fa-video" aria-hidden="true"></i></p>
+                <p class="location">Feinstein Institutes for<br>Medical Research</p>
+                </div>
+                <div class="projects-card-back">
+                    <div class="projects-card-back-content" tabindex="0">
+                        <ul>
+                            <li>Developed an automated pipeline to quantify hand movement using RGB-depth cameras in Python at 20 FPS</li>
+                            <li>Built and validated pipeline design to achieve position measurements accuracy within 5 mm of error using an an automated point cloud analysis script and ground truth objects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Electronic Wearable Blood Glucose Monitor -->
+        <div class="projects-card">
+            <button class="projects-card-flip-btn" aria-expanded="false" 
+                aria-label="Show details for Electronic Wearable Blood Glucose Monitor project">
+                <span class="sr-only">Flip card</span>
+            </button>
+            <div class="projects-card-inner">
+                <div class="projects-card-front" style="background-image: url(images/sr_design.jpg);">
+                <h3>Electronic Wearable Blood Glucose Monitor</h3>
+                <p class="location"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></p>
+                <p class="location">University of Rochester<br>(BME 296: Senior Capstone)</p>
+                </div>
+                <div class="projects-card-back">
+                    <div class="projects-card-back-content" tabindex="0">
+                        <ul>
+                            <li>Prototyped a wearable electronic sensor and MATLAB algorithm for blood glucose level estimation based on needs obtained from stakeholder interviews</li>
+                            <li>Validated sensor and algorithm design based on data from 10 human participants across 30 readings</li>
+                            <li>Outlined a plan to meet relevant standards and FDA regulations</li>
+                            <li>Produced detailed design documentation to support future development teams</li>
+                        </ul>
+                        <div class="linked-doc">
+                            <div><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+                            <div><a href="https://www.hajim.rochester.edu/senior-design-day/global-telehealth-tools/" target="_blank" rel="noopener">UR Engineering Design Day Website</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Voltage Regulator and Casing -->
+        <div class="projects-card">
+            <button class="projects-card-flip-btn" aria-expanded="false" 
+                aria-label="Show details for Voltage Regulator and Casing project">
+                <span class="sr-only">Flip card</span>
+            </button>
+            <div class="projects-card-inner">
+                <div class="projects-card-front" style="background-image: url(images/voltage_regulator.png);">
+                <h3>Voltage Regulator and Casing</h3>
+                <p class="location"><i class="fa-solid fa-bolt" aria-hidden="true"></i></p>
+                <p class="location">Feinstein Institutes for<br>Medical Research</p>
+                </div>
+                <div class="projects-card-back">
+                    <div class="projects-card-back-content" tabindex="0">
+                        <ul>
+                            <li>Soldered a voltage regulator circuit and tested connections with a multimeter to ensure safety and safe failing</li>
+                            <li>Designed a snap-fit enclosure in Fusion360 and 3D printed with a Creality printer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhancing Electronic Biosensor Sensitivity with Magnetic Nanoparticles -->
+        <div class="projects-card">
+            <button class="projects-card-flip-btn" aria-expanded="false" 
+                aria-label="Show details for Biosensor with Magnetic Nanoparticles project">
+                <span class="sr-only">Flip card</span>
+            </button>
+            <div class="projects-card-inner">
+                <div class="projects-card-front" style="background-image: url(images/reu_mnp.jpg);">
+                <h3>Enhancing Electronic Biosensor Sensitivity with Magnetic Nanoparticles</h3>
+                <p class="location"><i class="fa-solid fa-magnet" aria-hidden="true"></i></p>
+                <p class="location">Boston University<br>Photonics Center</p>
+                </div>
+                <div class="projects-card-back">
+                    <div class="projects-card-back-content" tabindex="0"> 
+                        <ul>
+                            <li>Implemented a design to improve sensitivity of an electrochemical biosensor using magnetic nanoparticles</li>
+                            <li>Conducted a literature review and learned necessary procedures for project design within first two weeks</li>
+                            <li>Created a 3D-printed part with SolidWorks based on feedback and needs of lab members</li>
+                            <li>Analyzed and visualized spectroscopy, immunoassay, and cyclic voltammetry results in Python with SciPy, matplotlib, and Plotly</li>
+                            <li>Worked with wet lab equipment including pipettes, vortexes, centrifuge, and sonicator</li>
+                            <li>Documented development process and all testing procedures for reference and replication by lab members</li>
+                            <li>Followed necessary lab safety procedures when handling hazardous chemicals or lab equipment </li>
+                            <li>Collected and applied feedback to ensure that sensor design met needs of each research team member</li>
+                            <li>Designed a poster presentation in Adobe Illustrator and presented it at a capstone poster session</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced Captioning for Musical Theater -->
+        <div class="projects-card">
+            <button class="projects-card-flip-btn" aria-expanded="false"
+                aria-label="Show details for Enhanced Captioning for Musical Theater project">
+                <span class="sr-only">Flip card</span>
+            </button>
+            <div class="projects-card-inner">
+                <div class="projects-card-front" style="background-image: url(images/ece477_spectrograms.png);">
+                <h3>Enhanced Captioning for Musical Theater</h3>
+                <p class="location"><i class="fa-solid fa-music" aria-hidden="true"></i></p>
+                <p class="location">University of Rochester<br>(ECE 277: Computer Audition)</p>
+                </div>
+                <div class="projects-card-back">
+                    <div class="projects-card-back-content" tabindex="0">
+                        <ul>
+                            <li>With a partner, created a captioning system in Python for audio with speech and song from multiple named speakers</li>
+                            <li>Separated audio sources with Demucs and processed in Librosa to identify different processing scenarios</li>
+                            <li>Generated captions with OpenAI Whisper and identified speakers based on expected lines in a script</li>
+                            <li>Assessed accuracy in different listening scenarios by comparing transcriptions to ground truth with difflib</li>
+                            <li>Wrote a report following standard journal guidelines and presented our system to the class</li>
+                        </ul>
+                        <div class="linked-doc">
+                            <div><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+                            <div><a href="https://hajim.rochester.edu/ece/sites/zduan/teaching/ece477/projects.html" target="_blank" rel="noopener">ECE 477 Projects Page</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <ul class="nav-socials">
+                <li><a href="mailto:ashlynnexavier@gmail.com" aria-label="Email" target="_blank" rel="noopener"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/ashlynnexavier" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/ashlynne-xavier/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+            </ul>
+            <p>© 2026 Ashlynne Xavier. All Rights Reserved.</p>
+            <p class="license-note">
+                Site code available under 
+                <a href="https://github.com/ashlynnexavier/ashlynnexavier.github.io/blob/c105fe64528e282d1ca341fe8a91bcf8e9a2f87d/LICENSE" target="_blank" rel="noopener">MIT License</a>.
+            </p>
+            <button id="footer-icon-button" 
+                onclick="wakeIcon(event)" 
+                aria-hidden="true">
+                <img src="images/favicon_footer.gif" id="footer-icon-img">
+            </button>
+        </div>
+    </footer>
+
+</body>
+
