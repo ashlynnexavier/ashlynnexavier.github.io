@@ -6,9 +6,17 @@ résumé and CV details, and project/job descriptions — is:
 
 **© 2026 Ashlynne Xavier. All rights reserved.**
 
-This content is not licensed for reuse, redistribution, or modification.
-Do not copy, republish, or reuse this content without explicit written
-permission.
-
 The source code that renders this content is separately licensed under the
 [MIT License](LICENSE) and may be freely reused.
+
+## Third-party design assets
+
+Some backgrounds were created using [Canva](https://www.canva.com) and may 
+incorporate Canva assets licensed under Canva's 
+[Content License Agreement](https://www.canva.com/policies/content-license-agreement/).
+
+Numerous icons were sourced from [Font Awesome](https://fontawesome.com), and 
+are used under the terms of Font Awesome's 
+[Free License](https://fontawesome.com/license/free).
+
+All rights to such elements remain with their respective owners.

@@ -38,6 +38,7 @@ body, html {
 :root {
     --primary-color: #C4BFB8;
     --secondary-color: #52504C;
+    --secondary-darker-color: #44433f;
     --accent-color: #9C4A1E;
     --dark-accent-color: #55250D;
     --bg-color: #F4F1ED;
@@ -372,6 +373,7 @@ nav {
     justify-content: left;
     align-items: center;
     line-height: normal;
+    text-wrap-mode: wrap;
 }
 
 .hero-text-bottom [class*=" fa-"],
@@ -379,6 +381,12 @@ nav {
 .hero-text-bottom i {
     margin: 0;
     padding: 0;
+}
+
+.hero-text-bottom .multiline, 
+.multiline i {
+    align-self: self-start;
+    margin-top: 0.25em;
 }
 
 .hero-text p {
@@ -485,7 +493,6 @@ nav {
 
 .experience {
     display: flex;
-    background-color: var(--secondary-color);
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
@@ -494,6 +501,10 @@ nav {
     margin-right: 0px;
     padding-bottom: 100px;
     margin-bottom: 0;
+    background-image: url('images/experience_background.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;   /* crops to fill, no distortion */
 }
 
 .experience .experience-card {
@@ -680,6 +691,84 @@ nav {
     margin: 0;
     gap: 20px;
     padding-bottom: 25px;
+    background-image: url('images/circuit_background.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;   /* crops to fill, no distortion */
+    position: relative;
+}
+
+.tag-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+    padding: 2px 10px;
+    background-color: rgba(var(--bg-color-rgb), 0.5);
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.35));
+    border-radius: 20px;
+    border: 1px solid var(--text-color);
+    width: 80%;
+}
+
+.tag-filter {
+    background-color: rgba(var(--bg-color-rgb), 0.5);
+    color: var(--text-color);
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-family: var(--main-font);
+    cursor: pointer;
+    transition: 0.2s;
+    margin: auto;
+    border: none;
+}
+
+.tag-filter:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border-color: var(--accent-color);
+}
+
+.tag-filter.active {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border-color: var(--accent-color);
+    font-weight: 600;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.card-tag {
+    background-color: rgba(var(--bg-color-rgb), 0.5);
+    color: var(--text-color);
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.projects-card.filtered-out {
+    display: none;
+}
+
+.no-results-message {
+    display: none;
+    color: var(--bg-color);
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.no-results-message.visible {
+    display: block;
 }
 
 .projects .projects-card {
@@ -845,7 +934,7 @@ nav {
     align-items: center;
 }
 
-.license-note {
+.license-note, .license-note a {
     font-size: 0.75rem;
     opacity: 0.7;
 }
@@ -859,7 +948,7 @@ footer a:hover {
 /***************************** RESPONSIVE CHANGES ****************************/
 /*****************************************************************************/
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
     .hero {
         margin: 30px 0;
         padding: 0 1rem;

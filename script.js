@@ -8,7 +8,7 @@ function toggleNav(e) {
 }
 
 // Close nav when a link is clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
+document.querySelectorAll('.nav-links a, .nav-name').forEach(link => {
     link.addEventListener('click', () => {
         document.getElementById('nav-links-wrapper').classList.remove('open');
     });
@@ -19,7 +19,7 @@ document.addEventListener('click', function(e) {
     const wrapper = document.getElementById('nav-links-wrapper');
     const nav = document.querySelector('nav');
     if (!nav.contains(e.target)) {
-        document.getElementById('nav-links-wrapper').classList.remove('open');
+        wrapper.classList.remove('open');
     }
 });
 
@@ -29,6 +29,37 @@ const isTouchDevice = () => !window.matchMedia('(hover: hover)').matches;
 // Set all card backs to inert on load (nothing starts flipped)
 document.querySelectorAll('.projects-card-back').forEach(back => {
     back.inert = true;
+});
+
+const tagButtons = document.querySelectorAll('.tag-filter');
+const projectCards = document.querySelectorAll('.projects-card');
+
+function applyFilter(tag) {
+    let visibleCount = 0;
+
+    projectCards.forEach(card => {
+        const cardTags = (card.dataset.tags || '').split(' ');
+        const matches = tag === 'all' || cardTags.includes(tag);
+        card.classList.toggle('filtered-out', !matches);
+        if (matches) visibleCount++;
+    });
+
+    const noResults = document.querySelector('.no-results-message');
+    if (noResults) {
+        noResults.classList.toggle('visible', visibleCount === 0);
+    }
+}
+
+tagButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        tagButtons.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+        applyFilter(btn.dataset.tag);
+    });
 });
 
 // Add click listeners to all project cards
@@ -76,8 +107,12 @@ document.addEventListener('click', function(e) {
 function wakeIcon(e) {
     const img = document.getElementById('footer-icon-img');
     const duration = 6900; // ms
+    const btn = document.getElementById('footer-icon-button');
+    btn.disabled = true;
     img.src = 'images/favicon_footer_click.gif';
     setTimeout(() => {
-        img.src = 'images/favicon_footer.gif';
+        img.src = 'images/favicon_footer.gif'  + '?t=' + Date.now();
+        btn.disabled = false;
     }, duration);    
+    
 }
